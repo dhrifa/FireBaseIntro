@@ -1,5 +1,6 @@
 package com.example.firebaseintro.ui.login
 
+import android.content.Intent
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -35,6 +36,7 @@ class LoginActivity : AppCompatActivity() {
         val username = binding.username
         val password = binding.password
         val login = binding.login
+        val loginEmail = binding.loginEmail
         val loading = binding.loading
 
         // Initialize Firebase Auth
@@ -48,6 +50,7 @@ class LoginActivity : AppCompatActivity() {
 
             // disable login button unless both username / password is valid
             login.isEnabled = loginState.isDataValid
+            loginEmail?.isEnabled = loginState.isDataValid
 
             if (loginState.usernameError != null) {
                 username.error = getString(loginState.usernameError)
@@ -58,6 +61,9 @@ class LoginActivity : AppCompatActivity() {
         })
 
         login.setOnClickListener {
+            signInWithEmailAndPassword(username.toString(), password.toString())
+        }
+        loginEmail?.setOnClickListener {
             signInWithEmailAndPassword(username.toString(), password.toString())
         }
 
@@ -133,7 +139,6 @@ class LoginActivity : AppCompatActivity() {
 
     private fun updateUiWithUser(model: LoggedInUserView) {
         val welcome = getString(R.string.welcome)
-//        val displayName = model.displayName
         // initiate successful logged in experience
         val user = Firebase.auth.currentUser
         user?.let {
@@ -167,8 +172,15 @@ class LoginActivity : AppCompatActivity() {
         // Check if user is signed in (non-null) and update UI accordingly.
         val currentUser = auth.currentUser
         if(currentUser != null){
+            Toast.makeText(applicationContext, "hi $currentUser", Toast.LENGTH_SHORT).show()
 //            reload()
         }
+//        if (auth.currentUser == null) {
+            // Not signed in, launch the Sign In activity
+//            startActivity(Intent(this, LoginActivity::class.java))
+          //  finish()
+//            return
+//        }
     }
 }
 
