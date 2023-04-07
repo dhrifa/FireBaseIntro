@@ -9,4 +9,7 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="web_client_id">829326188534-5tld5ardmgtseogmi10ffpiucjcsasm7.apps.googleusercontent.com</string>
+    <string name="facebook_application_id">601361091440858</string>
+    <string name="facebook_client_token">52e4566cea22694051398b745001bc1c</string>
 </resources>

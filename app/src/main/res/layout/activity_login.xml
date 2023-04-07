@@ -15,7 +15,7 @@
         android:id="@+id/username"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="50dp"
         android:hint="@string/prompt_email"
         android:inputType="textEmailAddress"
         android:selectAllOnFocus="true"
@@ -43,56 +43,59 @@
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="64dp"
         android:enabled="false"
         android:text="@string/action_sign_in"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
     <Button
         android:id="@+id/loginEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="64dp"
         android:enabled="false"
-        android:text="sign_in"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Email Password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintTop_toBottomOf="@+id/login" />
+
     <Button
-        android:id="@+id/loginGmail"
+        android:id="@+id/loginGmail1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="64dp"
-        android:enabled="false"
-        android:text="Gmail"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:enabled="true"
+        android:text="loginGmail 1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginEmail"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintTop_toBottomOf="@+id/loginEmail" />
+
     <Button
-        android:id="@+id/loginFacebook"
+        android:id="@+id/loginGmail2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="64dp"
-        android:enabled="false"
-        android:text="FaceBook"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:enabled="true"
+        android:text="loginGmail2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginGmail"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintTop_toBottomOf="@+id/loginGmail1" />
+
+    <Button
+        android:id="@+id/loginGmail3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="16dp"
+        android:enabled="true"
+        android:text="loginGmail3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginGmail2" />
 
     <ProgressBar
         android:id="@+id/loading"
